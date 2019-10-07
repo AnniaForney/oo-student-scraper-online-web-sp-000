@@ -34,7 +34,7 @@ class Scraper
     github = (url_details.grep /github.com/)[0]
     blog = url_details[3]
     profile_quote = student_details.css("profile_quote").text.strip 
-    
+
   end
 
 end
