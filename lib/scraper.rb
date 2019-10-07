@@ -9,6 +9,7 @@ class Scraper
     students = page.css(".student-card")
     students.each do |s|
       student_details = {}
+      profile_url = s.css("a").map{|link| link['href']}
       
   end
 
