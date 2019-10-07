@@ -11,9 +11,8 @@ class Scraper
       student_details = {}
       student_details[:name] = student.css("h4.student-name").text
       student_details[:location] = student.css("p.student-location").text
-      student_details[:profile_url] = 
+      student_details[:profile_url] =
 
-      if ( name.length != 0 )
           scraped_students << student_details
         end
       end
