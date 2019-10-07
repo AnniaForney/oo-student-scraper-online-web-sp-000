@@ -28,6 +28,12 @@ class Scraper
     student_details = page.css(".vitals-container")
 
     url_details = student_details.css("a").map{|link| link['href']}
+
+    twitter = (url_details.grep /twitter.com/)[0]
+    linkedin = (url_details.grep /linkedin.com/)[0]
+    github = (url_details.grep /github.com/)[0]
+    blog = url_details[3]
+    profile_quote = student_details.css("profile_quote").text.strip 
     
   end
 
