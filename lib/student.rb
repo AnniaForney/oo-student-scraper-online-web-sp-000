@@ -6,7 +6,9 @@ class Student
 
   def initialize(hash)
     @name = hash[":name"].to_s
-    
+    @location = hash[":location"].to_s
+    @profile_url = hash[":profile_url"].to_s
+    @@all << self 
   end
 
   def self.create_from_collection(students_array)
