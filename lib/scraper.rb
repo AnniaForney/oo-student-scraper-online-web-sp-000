@@ -18,6 +18,8 @@ class Scraper
       if ( name.length != 0 )
           scraped_students << student_details
         end 
+      end 
+      return scraped_students 
   end
 
   def self.create_from_collection(students_array)
