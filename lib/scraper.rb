@@ -7,11 +7,12 @@ class Scraper
     scraped_students = []
     page = Nokogiri::HTML open((index_url))
     students = page.css(".student-card")
-    page.css("div.student-card").each do |s|
+    page.css(".student-card").each do |s|
       student_details = {}
-      student_details[:name] = name
-      student_details[:location] = location
-      student_details[:profile_url] = profile_url[0]
+      student_details[:name] = student.css("h4.student-name").text
+      student_details[:location] = student.css("p.student-location").text 
+      student_details[:profile_url] = './fixtures/student
+-site/index.html' + student.css("a").attribute("href")
 
       if ( name.length != 0 )
           scraped_students << student_details
