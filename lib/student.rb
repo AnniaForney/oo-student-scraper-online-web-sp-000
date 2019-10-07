@@ -21,7 +21,8 @@ class Student
     @twitter = attributes_hash[":twitter"].to_s
     @linkedin = attributes_hash[":linkedin"].to_s
     @github = attributes_hash[":github"].to_s
-    @blog = attributes_hash[":blog"].to_s 
+    @blog = attributes_hash[":blog"].to_s
+
     
   end
 
