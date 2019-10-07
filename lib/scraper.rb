@@ -7,7 +7,9 @@ class Scraper
     scraped_students = []
     page = Nokogiri::HTML open((index_url))
     students = page.css(".student-card")
-    
+    students.each do |s|
+      student_details = {}
+      
   end
 
   def self.create_from_collection(students_array)
