@@ -11,9 +11,9 @@ class Scraper
       student_details = {}
       profile_url = s.css("a").map{|link| link['href']}
       name = s.css(".card-text-container p").text.strip
-      student_details[":name"] = name
-      student_details[":location"] = location
-      student_details[":profile_url"] = profile_url[0]
+      student_details[:name] = name
+      student_details[:location] = location
+      student_details[:profile_url] = profile_url[0]
 
       if ( name.length != 0 )
           scraped_students << student_details
@@ -36,12 +36,12 @@ class Scraper
     profile_quote = student_details.css("profile_quote").text.strip
     bio = page.css(".details-container p").text.strip
 
-    profile_details[":twitter"] = twitter
-    profile_details[":linkedin"] = linkedin
-    profile_details[":github"] = github
-    profile_details[":blog"] = blog
-    profile_details[":profile_quote"] = profile_quote
-    profile_details[":bio"] = bio
+    profile_details[:twitter] = twitter
+    profile_details[:linkedin] = linkedin
+    profile_details[:github] = github
+    profile_details[:blog] = blog
+    profile_details[:profile_quote] = profile_quote
+    profile_details[:bio] = bio
 
     return profile_details
   end
