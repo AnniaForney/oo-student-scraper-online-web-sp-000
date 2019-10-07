@@ -13,7 +13,7 @@ class Scraper
       location = s.css("p.student-location").text.strip
       student_details[:name] = name
       student_details[:location] = location
-      student_details[:profile_url] = profile_url 
+      student_details[:profile_url] = profile_url
 
       if ( name.length != 0 )
           scraped_students << student_details
