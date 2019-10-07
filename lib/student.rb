@@ -14,10 +14,12 @@ class Student
   def self.create_from_collection(students_array)
     students_array.each do |student|
       new(student)
-    end 
+    end
   end
 
   def add_student_attributes(attributes_hash)
+    @twitter = attributes_hash[":twitter"].to_s
+    @linkedin = attributes_hash[":linkedin"].to_s
   end
 
   def self.all
