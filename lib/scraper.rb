@@ -46,6 +46,4 @@ class Scraper
     return profile_details
   end 
 
-  end
-
 end
