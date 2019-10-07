@@ -17,8 +17,8 @@ class Scraper
 
       if ( name.length != 0 )
           scraped_students << student_details
-        end 
-      end 
+        end
+      end
       return scraped_students 
   end
 
