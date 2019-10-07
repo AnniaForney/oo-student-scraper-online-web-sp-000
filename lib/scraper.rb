@@ -9,8 +9,6 @@ class Scraper
     students = page.css(".student-card")
     page.css("div.student-card").each do |s|
       student_details = {}
-      name = s.css(".card-text-container p").text.strip
-      location = s.css("p.student-location").text.strip
       student_details[:name] = name
       student_details[:location] = location
       student_details[:profile_url] = profile_url[0]
