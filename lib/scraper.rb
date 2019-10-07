@@ -7,7 +7,7 @@ class Scraper
     scraped_students = []
     page = Nokogiri::HTML open((index_url))
     students = page.css(".student-card")
-    students.each do |s|
+    page.css("div.student-card").each do |s|
       student_details = {}
       name = s.css(".card-text-container p").text.strip
       location = s.css("p.student-location").text.strip
