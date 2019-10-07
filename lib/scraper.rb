@@ -19,10 +19,10 @@ class Scraper
           scraped_students << student_details
         end
       end
-      return scraped_students 
+      return scraped_students
   end
 
-  def self.create_from_collection(students_array)
+  def self.scrape_profile_page(profile_url)
   end
 
 end
