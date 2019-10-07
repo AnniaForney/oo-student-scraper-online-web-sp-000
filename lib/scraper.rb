@@ -36,7 +36,15 @@ class Scraper
     profile_quote = student_details.css("profile_quote").text.strip
     bio = page.css(".details-container p").text.strip
 
-    
+    profile_details[":twitter"] = twitter 
+    profile_details[":linkedin"] = linkedin
+    profile_details[":github"] = github
+    profile_details[":blog"] = blog 
+    profile_details[":profile_quote"] = profile_quote
+    profile_details[":bio"] = bio 
+
+    return profile_details
+  end 
 
   end
 
