@@ -24,6 +24,9 @@ class Scraper
 
   def self.scrape_profile_page(profile_url)
     profile_details = {}
+    page = Nokogiri::HTML open((profile_url))
+    student_details = page.css(".vitals-container")
+
     
   end
 
