@@ -33,7 +33,8 @@ class Scraper
     linkedin = (url_details.grep /linkedin.com/)[0]
     github = (url_details.grep /github.com/)[0]
     blog = url_details[3]
-    profile_quote = student_details.css("profile_quote").text.strip 
+    profile_quote = student_details.css("profile_quote").text.strip
+    bio = page.css(".details-container p").text.strip 
 
   end
 
