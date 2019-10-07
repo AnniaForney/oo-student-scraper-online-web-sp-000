@@ -27,6 +27,7 @@ class Scraper
     page = Nokogiri::HTML open((profile_url))
     student_details = page.css(".vitals-container")
 
+    url_details = student_details.css("a").map{|link| link['href']}
     
   end
 
