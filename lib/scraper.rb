@@ -44,6 +44,6 @@ class Scraper
     profile_details[":bio"] = bio
 
     return profile_details
-  end 
+  end
 
 end
