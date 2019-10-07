@@ -16,7 +16,7 @@ class Scraper
           scraped_students << student_details
         end
       end
-      return student_details
+      student_details
   end
 
   def self.scrape_profile_page(profile_url)
